@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel by Manish</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Swiper's CSS carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div id="outer-cont" style="background-color: purple;">
+        <div id="carousel" style="border: 5px solid rgb(143, 204, 39);">
+
+            <section id="scroll-container-section">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">               
+                        <div class="testimonialBox">
+                            <div class="content swiper">
+                                <img src="certificates/guardians-of-the-galaxy.jpg" class="carousel-img" alt="guardians-of-the-galaxy">
+                              </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">               
+                        <div class="testimonialBox">
+                            <div class="content">
+                                <img src="certificates/justice-league.jpg" class="carousel-img" alt="justice-league">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">               
+                        <div class="testimonialBox">
+                            <div class="content">
+                                <img src="certificates/spider-man.jpg" class="carousel-img" alt="spider-man">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">               
+                        <div class="testimonialBox">
+                            <div class="content">
+                                <img src="certificates/suicide-squad.jpg" class="carousel-img" alt="suicide-squad">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">               
+                        <div class="testimonialBox">
+                            <div class="content">
+                                <img src="certificates/thor-ragnarok.jpg" class="carousel-img" alt="thor-ragnarok">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+    </div>
+    </div>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+// ---------by me
+
+function myFunction(x) {
+  if (x.matches) {
+    var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        spaceBetween: -20,
+        parallax: true,
+        coverflowEffect: {
+            rotate: 20,
+      stretch: 0,
+      depth: 315,
+      modifier: 2,
+      slideShadows: true,
+    },
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    loop: true,
+
+    keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+    },
+
+    mousewheel: {
+        invert: true,
+    },
+    effect: 'cube',
+  cubeEffect: {
+    slideShadows: false,
+  },
+});
+  } else {
+    var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        spaceBetween: -20,
+        coverflowEffect: {
+            rotate: 20,
+      stretch: 0,
+      depth: 315,
+      modifier: 2,
+      slideShadows: true,
+    },
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    loop: true,
+
+    keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+    },
+
+    mousewheel: {
+        invert: true,
+    },
+});
+  }
+}
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x)
+x.addListener(myFunction)
+</script>
+</body>
+</html>
